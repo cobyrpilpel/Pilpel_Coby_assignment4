@@ -10,10 +10,12 @@
 //none needed
 //Number function 2 global variables
 
-//Number function 1 - Converting a string to an integer. 
+//Number function 1 - Converting a string to an integer. Prompt for the number active.
+//Code also works with the included simpler variable that I commented into the code.
 
 var convertToNumber = function (stringFormat) 
 	{var stringFormat = prompt("Pick a number","")
+	//{var stringFormat = "20"
 	var answer;
 	answer = parseInt(stringFormat);
 	return answer;};
