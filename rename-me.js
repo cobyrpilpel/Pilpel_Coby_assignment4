@@ -8,8 +8,8 @@
 //Global variables (I'm throwing these up here as I run into a situation where I need one)
 var checkUrl = "https://orgsync.com"
 //var checkUrl = "htts://orgsync.com" <----Alternate incorrectly formatted URL to confirm string function 1 works.
-
-
+var arrayFunctionOne = [2, 3, 6, 8, 11, 13];
+var aNumber = 9
 
 
 
@@ -43,5 +43,15 @@ var urlCheck = function(checkUrl)
 
 console.log(urlCheck(checkUrl))
 
-//
+//Array function 1 - Find the smallest value in an array that is greater than a given number
+
+var smallYetGreater = function(aNumber,arrayFunctionOne) {
+	arrayFunctionOne.sort();
+	for (var i = 0; i <= arrayFunctionOne.length; i++) 
+	{if (arrayFunctionOne[i] > aNumber) 
+	{return arrayFunctionOne[i];}}};
+
+
+console.log(smallYetGreater(aNumber,arrayFunctionOne))
+
 
