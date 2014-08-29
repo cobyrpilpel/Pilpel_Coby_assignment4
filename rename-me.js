@@ -10,7 +10,7 @@ var checkUrl = "https://orgsync.com"
 //var checkUrl = "htts://orgsync.com" <----Alternate incorrectly formatted URL to confirm string function 1 works.
 var arrayFunctionOne = [2, 3, 6, 8, 11, 13];
 var aNumber = 9
-
+var phoneNo = 914-880-0999
 
 
 //Number function 1 - Converting a string to an integer. Prompt for the number active.
@@ -26,9 +26,6 @@ var convertToNumber = function (stringFormat)
 console.log(convertToNumber())
 
 console.log(isNaN(convertToNumber))
-
-//Number function 2 - Format a number to use a specific number of decimal places
-//brain block - will come back to this later
 
 
 
@@ -54,4 +51,24 @@ var smallYetGreater = function(aNumber,arrayFunctionOne) {
 
 console.log(smallYetGreater(aNumber,arrayFunctionOne))
 
+//String Function 2 - Does a string follow a 123-456-7890 pattern like a phone number?
 
+var confirmFormat = function (phoneNo) 
+	{var checkNumber = phoneNo;
+	var breakOne = (checkNumber.substring(3, 4));
+	var breakTwo = (checkNumber.substring(7, 8));
+	if (checkNumber.length == 12) 
+	{if (breakOne =="-" && breakTwo =="-") 
+	{return true;} 
+	else 
+	{return false;}}
+	else 
+	{return false;}};
+	
+	var check = confirmFormat("914-260-0947");
+    //var check = confirmFormat("91-4260-0947")
+    //switch the var check statements to confirm function is working
+console.log(check)
+
+
+//
