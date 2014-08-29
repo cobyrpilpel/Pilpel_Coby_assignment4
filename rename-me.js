@@ -10,12 +10,12 @@ var checkUrl = "https://orgsync.com"
 //var checkUrl = "htts://orgsync.com" <----Alternate incorrectly formatted URL to confirm string function 1 works.
 var arrayFunctionOne = [2, 3, 6, 8, 11, 13];
 var aNumber = 9
-var phoneNo = 914-880-0999
+
 
 
 //Number function 1 - Converting a string to an integer. Prompt for the number active.
 //Code also works with the included simpler variable that I commented into the code.
-
+console.log("Number function one")
 var convertToNumber = function (stringFormat) 
 	{var stringFormat = prompt("Pick a number","")
 	//{var stringFormat = "20"
@@ -29,19 +29,8 @@ console.log(isNaN(convertToNumber))
 
 
 
-//String function 1 - Is the string a URL?
-var urlCheck = function(checkUrl) 
-	{var url ;
-	if(checkUrl.substring(0,7) === "http://" || checkUrl.substring(0,8) === "https://") 
-	{url = true;} 
-	else 
-	{url = false;}
-    return url;};
-
-console.log(urlCheck(checkUrl))
-
 //Array function 1 - Find the smallest value in an array that is greater than a given number
-
+console.log("Array function 1")
 var smallYetGreater = function(aNumber,arrayFunctionOne) {
 	arrayFunctionOne.sort();
 	for (var i = 0; i <= arrayFunctionOne.length; i++) 
@@ -51,8 +40,25 @@ var smallYetGreater = function(aNumber,arrayFunctionOne) {
 
 console.log(smallYetGreater(aNumber,arrayFunctionOne))
 
-//String function 2 - Does a string follow a 123-456-7890 pattern like a phone number?
 
+
+//String function 1 - Is the string a URL?
+console.log("String function 1")
+var urlCheck = function(checkUrl) 
+	{var url ;
+	if(checkUrl.substring(0,7) === "http://" || checkUrl.substring(0,8) === "https://") 
+	{url = true;} 
+	else 
+	{url = false;}
+    return url;};
+
+console.log(urlCheck("www.orgsync.com"))
+//console.log(urlCheck("ww.orgsync.com"))
+//switch the console.log statements to confirm function is working
+
+
+//String function 2 - Does a string follow a 123-456-7890 pattern like a phone number?
+console.log("String function 2")
 var confirmFormat = function (phoneNo) 
 	{var checkNumber = phoneNo;
 	var breakOne = (checkNumber.substring(3, 4));
@@ -71,8 +77,10 @@ var confirmFormat = function (phoneNo)
 console.log(check)
 
 
-//String function 3 - Does a string follow an aaa@bbb.ccc pattern like an email address?
 
+
+//String function 3 - Does a string follow an aaa@bbb.ccc pattern like an email address?
+console.log("String function 3")
 var checkFormat = function (email) 
 	{var address = email;
 	var period = address.indexOf(".");
@@ -82,6 +90,22 @@ var checkFormat = function (email)
 	else 
 	{return true;};}
 	
-	//var testEmail = checkFormat("cobyrpilpel@fullsail.edu");
-	  var testEmail = checkFormat("cobyrpilpel@fullsail")
+	var testEmail = checkFormat("cobyrpilpel@fullsail.edu");
+	//var testEmail = checkFormat("cobyrpilpel@fullsail")
+    //switch the var testEmail statements to confirm function is working
 console.log(testEmail);
+
+
+
+//String function 4 - Title-case a string (split into words, then uppercase the first letter of each word)
+console.log("String function 4")
+var capitalizationChange = function(string) 
+	{var break1 = string.split(" ");
+	var caps = "";
+	for (var i = 0, j = break1.length; i < j; i++) 
+	{var break2 = break1[i].replace(break1[i].charAt(0),(break1[i].charAt(0)).toUpperCase());
+	caps = caps.concat(break2 + " ");}
+	return caps;};
+
+	var testString = capitalizationChange("rocket racoon");
+console.log(testString);
