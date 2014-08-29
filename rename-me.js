@@ -51,7 +51,7 @@ var smallYetGreater = function(aNumber,arrayFunctionOne) {
 
 console.log(smallYetGreater(aNumber,arrayFunctionOne))
 
-//String Function 2 - Does a string follow a 123-456-7890 pattern like a phone number?
+//String function 2 - Does a string follow a 123-456-7890 pattern like a phone number?
 
 var confirmFormat = function (phoneNo) 
 	{var checkNumber = phoneNo;
@@ -71,4 +71,17 @@ var confirmFormat = function (phoneNo)
 console.log(check)
 
 
-//
+//String function 3 - Does a string follow an aaa@bbb.ccc pattern like an email address?
+
+var checkFormat = function (email) 
+	{var address = email;
+	var period = address.indexOf(".");
+	var at = address.indexOf("@");
+	if (at == -1 || period == -1 || (at +2) >= period) 
+	{return false;} 
+	else 
+	{return true;};}
+	
+	//var testEmail = checkFormat("cobyrpilpel@fullsail.edu");
+	  var testEmail = checkFormat("cobyrpilpel@fullsail")
+console.log(testEmail);
